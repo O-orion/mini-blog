@@ -1,0 +1,42 @@
+.menu {
+
+    display: flex;
+    box-shadow: rgba(0,0,0,.15) 0px -2px 10px 0px;
+    justify-content: space-between;
+
+    padding: .5em 2em;
+    align-items: center;
+
+}
+
+.brand {
+    font-size: 1.2em;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.bran span {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.links_list {
+    display: flex;
+    list-style: none;
+    gap: 1.5em;
+}
+
+.link_list li a {
+    padding: .4em .6em;
+}
+
+.active {
+    background-color: #000;
+    padding: 5px;
+    color: #fff;
+
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 5 ease-in-out;
+}
+
