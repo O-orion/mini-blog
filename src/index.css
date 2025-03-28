@@ -1,29 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #F6FCFF;
+  background-color: #1A1A1D;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins';
+  font-family: 'Poppins', serif;
+  color: #E8E8E8;
+  overflow-x: hidden;
 }
 
-input::placeholder, textarea::placeholder {
-  font-family: "Poppins";
+input::placeholder,
+textarea::placeholder {
+  font-family: 'Roboto', sans-serif;
+  color: #A9A9A9;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none;
+  border-color: #A68A64;
+  box-shadow: 0 0 5px rgba(166, 138, 100, 0.3);
 }
 
-a, nav button {
+a,
+nav button {
   text-decoration: none;
   background-color: transparent;
   border: none;
-  color: #000;
-  transition: .4s;
+  color: #E8E8E8;
+  transition: color 0.3s ease;
   cursor: pointer;
-  font-size: 1em;
-  font-family: "Poppins";
+  font-family: 'Roboto', sans-serif;
 }
 
-a:hover, nav button:hover {
-  color: #bbb
+a:hover,
+nav button:hover {
+  color: #A68A64;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import styles from './styles.module.css';
+import styles from './register.module.css';
 import { useAuthentication } from '../../hooks/useAuthentication';
 
 function Registro() {
@@ -97,7 +97,7 @@ function Registro() {
           />
         </label>
 
-        <button type="submit" disabled={loading}>
+        <button  type="submit" disabled={loading}>
           {loading ? "Carregando..." : "Registrar"}
         </button>
         {erros && <p className={styles.error}>{erros}</p>}

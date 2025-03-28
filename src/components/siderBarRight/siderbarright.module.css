@@ -1,0 +1,17 @@
+.sidebarRight {
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
+    padding: 20px;
+    background-color: #2e2e3327;
+    border-left: 1px solid #6B4E71;
+    color: #E8E8E8;
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+  @media (max-width: 768px) {
+     .sidebarRight {
+      display: none; 
+    }
+  }

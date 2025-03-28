@@ -7,15 +7,15 @@
   box-shadow: 0 8px 20px rgba(107, 78, 113, 0.1);
 }
 
-.title {
-  font-size: 30px;
+h2  {
+  font-size: 25px;
   font-weight: 700;
   color: #E8E8E8;
   text-align: center;
   margin-bottom: 10px;
 }
 
-.subtitle {
+p {
   font-size: 16px;
   color: #A68A64;
   text-align: center;
@@ -23,26 +23,26 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.form {
+form {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.label {
+label {
   display: flex;
   flex-direction: column;
   font-size: 14px;
   color: #E8E8E8;
 }
 
-.label span {
+label span {
   margin-bottom: 8px;
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
 }
 
-.input {
+input {
   padding: 12px 15px;
   border: 1px solid #6B4E71;
   border-radius: 6px;
@@ -53,12 +53,12 @@
   transition: all 0.3s ease;
 }
 
-.input:focus {
+input:focus {
   border-color: #A68A64;
   background: #2E2E33;
 }
 
-.button {
+button {
   padding: 12px;
   background: linear-gradient(135deg, #6B4E71, #543B5A);
   color: #E8E8E8;
@@ -71,17 +71,6 @@
   transition: background 0.3s ease;
 }
 
-.button:hover {
+button:hover {
   background: #543B5A;
-}
-
-.error {
-  margin-top: 10px;
-  padding: 10px;
-  background: rgba(139, 38, 53, 0.1);
-  color: #8B2635;
-  border-radius: 6px;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
 }

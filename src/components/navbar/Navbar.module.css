@@ -1,42 +1,107 @@
 .menu {
-
-    display: flex;
-    box-shadow: rgba(0,0,0,.15) 0px -2px 10px 0px;
-    justify-content: space-between;
-
-    padding: .5em 2em;
-    align-items: center;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2em 2em;
+  background: #1A1A1D;
+  border-bottom: 1px solid #A68A64;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100vw;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .brand {
-    font-size: 1.2em;
-    font-weight: 900;
-    text-decoration: none;
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #E8E8E8;
+  text-decoration: none;
 }
 
-.bran span {
-    font-weight: 900;
-    text-transform: uppercase;
+.brand span {
+  color: #A68A64;
+  text-transform: uppercase;
 }
 
 .links_list {
-    display: flex;
-    list-style: none;
-    gap: 1.5em;
+  display: flex;
+  list-style: none;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
-.link_list li a {
-    padding: .4em .6em;
+.links_list li a {
+  padding: 0.5em 1em;
+  color: #E8E8E8;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
 }
 
 .active {
-    background-color: #000;
-    padding: 5px;
-    color: #fff;
-
-    border-radius: 5px;
-    font-weight: 700;
-    transition: 5 ease-in-out;
+  background: #6B4E71;
+  border-radius: 5px;
+  color: #E8E8E8;
 }
 
+.dropdown {
+  position: relative;
+}
+
+.profileIcon {
+  background: none;
+  border: none;
+  color: #E8E8E8;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.profileIcon:hover {
+  color: #A68A64;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #2E2E33;
+  border: 1px solid #6B4E71;
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 5px 0 0 0;
+  min-width: 150px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dropdownMenu li {
+  padding: 0;
+}
+
+.dropdownMenu li a,
+.dropdownMenu li button {
+  display: block;
+  padding: 8px 15px;
+  color: #E8E8E8;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdownMenu li a:hover,
+.dropdownMenu li button:hover {
+  background: #6B4E71;
+}

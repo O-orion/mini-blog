@@ -1,0 +1,24 @@
+
+.grid {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px; 
+    gap: 20px;
+    padding: 20px;
+    min-height: calc(100vh - 80px); 
+    background-color: #1A1A1D; 
+    max-width: 100%;
+  }
+  
+  .feed {
+    padding: 20px;
+    background-color: #2e2e3327;
+    border-radius: 8px;
+    color: #E8E8E8;
+    font-family: 'Cinzel', serif;
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
