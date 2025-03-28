@@ -36,7 +36,7 @@ export const useAuthentication = () => {
         displayName: data.name,
       });
 
-      console.log("Perfil atualizado com sucesso, user:", user); // Log para confirmar
+      console.log("Perfil atualizado com sucesso, user:", user);
 
       setLoading(false);
       return user;
@@ -46,6 +46,7 @@ export const useAuthentication = () => {
       if (error.code === "auth/email-already-in-use") {
         errorMessage = "Este email já está em uso.";
       } else if (error.code === "auth/weak-password") {
+        console.log('AQUI')
         errorMessage = "A senha deve ter pelo menos 6 caracteres.";
       } else if (error.code === "auth/invalid-email") {
         errorMessage = "Email inválido.";
@@ -57,7 +58,6 @@ export const useAuthentication = () => {
   };
 
   useEffect(() => {
-    return () => setCancelled(true);
   }, []);
 
   return {

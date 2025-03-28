@@ -11,7 +11,7 @@ function Registro() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [erros, setErros] = useState("");
-  const [successMessage, setSuccessMessage] = useState(""); // Adicionado para sucesso
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,7 +43,7 @@ function Registro() {
       setConfirmPassword("");
     } else {
       console.log("Falha no registro, res é null. Erro do hook:", authError);
-      if (!authError) setErros("Erro desconhecido ao registrar. Tente novamente.");
+     
     }
   };
 

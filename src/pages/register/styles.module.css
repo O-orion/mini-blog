@@ -87,10 +87,21 @@
   .error {
     padding: 0.6em;
     color: rgb(236, 19, 19) !important;
-    font-weight: 500;
+    font-weight: 900;
     font-size: 16px;
     text-align: center;
-    background-color: rgba(236, 19, 19, 0.1); /* Fundo vermelho claro */
+    background-color: rgba(236, 19, 19, 0.1);
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  .success {
+    padding: 0.6em;
+    color: rgba(64, 175, 42, 0.815) !important;
+    font-weight: 900;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgba(4, 161, 12, 0.281); 
     border-radius: 5px;
     margin-top: 10px;
   }
