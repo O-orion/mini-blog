@@ -1,12 +1,11 @@
+/* Estilize o footer */
 .footer {
-    height: 250;
+    height: 200px; /* Corrigido: adicione "px" à unidade */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f8cec6;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    background-color: #dddddd;
+    flex-shrink: 0; /* Impede que o footer encolha */
     width: 100%;
-}
+  }
