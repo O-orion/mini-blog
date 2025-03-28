@@ -4,19 +4,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #1A1A1D;
+  background: linear-gradient(180deg, #1A1A1D 0%, #2E2E33 100%); /* Gradiente sutil */
   color: #E8E8E8;
   width: 100%;
   border-top: 1px solid #A68A64;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .footer h3 {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #A68A64;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  letter-spacing: 0.5px;
 }
 
 .footer p {
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
+  color: #E8E8E8;
+  opacity: 0.8;
 }

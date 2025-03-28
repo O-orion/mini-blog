@@ -1,27 +1,29 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: #1A1A1D;
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', serif;
+  font-family: 'Roboto', sans-serif;
   color: #E8E8E8;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 input::placeholder,
 textarea::placeholder {
   font-family: 'Roboto', sans-serif;
   color: #A9A9A9;
+  font-style: italic;
 }
 
 input:focus,
 textarea:focus {
   outline: none;
   border-color: #A68A64;
-  box-shadow: 0 0 5px rgba(166, 138, 100, 0.3);
+  box-shadow: 0 0 8px rgba(166, 138, 100, 0.4);
 }
 
 a,
@@ -30,7 +32,7 @@ nav button {
   background-color: transparent;
   border: none;
   color: #E8E8E8;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background 0.3s ease;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
 }
@@ -38,4 +40,22 @@ nav button {
 a:hover,
 nav button:hover {
   color: #A68A64;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2E2E33;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6B4E71;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A68A64;
 }

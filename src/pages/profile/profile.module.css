@@ -1,0 +1,221 @@
+.profileContainer {
+    max-width: 900px;
+    margin: 100px auto 40px;
+    padding: 0 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #E8E8E8;
+  }
+  
+  .profileHeader {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    background: linear-gradient(135deg, #2E2E33, #1A1A1D);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .profilePicture {
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .profilePicture:hover {
+    transform: scale(1.05);
+  }
+  
+  .profileImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #A68A64;
+    box-shadow: 0 0 15px rgba(166, 138, 100, 0.5);
+  }
+  
+  .placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #36465d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E8E8E8;
+    font-size: 18px;
+    border: 3px dashed #A68A64;
+  }
+  
+  .uploadInput {
+    display: none;
+  }
+  
+  .uploadButton {
+    display: block;
+    margin-top: 15px;
+    background: #6B4E71;
+    color: #E8E8E8;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .uploadButton:hover {
+    background: #A68A64;
+    transform: translateY(-2px);
+  }
+  
+  .uploadButton:disabled {
+    background: #555;
+    cursor: not-allowed;
+  }
+  
+  .userInfo {
+    flex: 1;
+  }
+  
+  .userName {
+    font-size: 32px;
+    font-family: 'Georgia', serif;
+    color: #E8E8E8;
+    margin: 0;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .userTitle {
+    font-size: 18px;
+    color: #A68A64;
+    font-style: italic;
+    margin: 5px 0;
+  }
+  
+  .userEmail {
+    font-size: 16px;
+    color: #A9A9A9;
+    margin: 5px 0;
+  }
+  
+  .profileStats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px 0;
+    padding: 20px;
+    background: #2E2E33;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .statItem {
+    text-align: center;
+  }
+  
+  .statNumber {
+    display: block;
+    font-size: 24px;
+    color: #E8E8E8;
+    font-weight: bold;
+  }
+  
+  .statLabel {
+    font-size: 14px;
+    color: #A9A9A9;
+  }
+  
+  .profileContent {
+    margin-top: 20px;
+  }
+  
+  .section {
+    background: #2E2E33;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .section h2 {
+    font-size: 22px;
+    color: #E8E8E8;
+    font-family: 'Georgia', serif;
+    margin-bottom: 15px;
+  }
+  
+  .tags,
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .tag,
+  .badge {
+    background: #6B4E71;
+    color: #E8E8E8;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+  }
+  
+  .tag:hover,
+  .badge:hover {
+    transform: scale(1.1);
+  }
+  
+  .badge {
+    background: #A68A64;
+  }
+  
+  .input {
+    width: 100%;
+    background: #1A1A1D;
+    border: 1px solid #A68A64;
+    border-radius: 10px;
+    padding: 12px;
+    color: #E8E8E8;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input:focus {
+    border-color: #E94E77;
+  }
+  
+  .actionButton {
+    background: #E94E77;
+    color: #E8E8E8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .actionButton:hover {
+    background: #D43D65;
+    transform: translateY(-2px);
+  }
+  
+  .noContent {
+    color: #A9A9A9;
+    font-style: italic;
+    font-size: 14px;
+  }
+  
+  .loading {
+    text-align: center;
+    color: #A9A9A9;
+    font-size: 18px;
+    margin-top: 50px;
+  }

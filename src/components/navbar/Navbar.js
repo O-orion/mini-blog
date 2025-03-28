@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAuthStatus } from '../../hooks/useAuthStatus';
 import { useAuthentication } from '../../hooks/useAuthentication';
-import { FaUserCircle } from 'react-icons/fa'; // Ícone de perfil
+import { FaUserCircle } from 'react-icons/fa';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
@@ -14,21 +14,21 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     await logout();
-    setIsDropdownOpen(false); // Fecha o dropdown após logout
+    setIsDropdownOpen(false);
   };
 
   return (
     <nav className={styles.menu}>
       <NavLink to="/" className={styles.brand}>
-        My<span>-Poems</span>
+        My<span>Poems</span>
       </NavLink>
-      <ul className={styles.links_list}>
+      <ul className={styles.linksList}>
         {!user ? (
           <>
             <li>
-            <NavLink to="/" className={({ isActive }) => (isActive ? styles.active : '')}>
+              <NavLink to="/" className={({ isActive }) => (isActive ? styles.active : '')}>
                 Home
-            </NavLink>
+              </NavLink>
             </li>
             <li>
               <NavLink to="/cadastro" className={({ isActive }) => (isActive ? styles.active : '')}>
@@ -41,10 +41,10 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-                <NavLink to="/about" className={({ isActive }) => (isActive ? styles.active : '')}>
-                    About
-                </NavLink>
-             </li>
+              <NavLink to="/about" className={({ isActive }) => (isActive ? styles.active : '')}>
+                About
+              </NavLink>
+            </li>
           </>
         ) : (
           <li className={styles.dropdown}>
@@ -52,7 +52,7 @@ const Navbar = () => {
               className={styles.profileIcon}
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             >
-              <FaUserCircle size={24} />
+              <FaUserCircle size={28} />
             </button>
             {isDropdownOpen && (
               <ul className={styles.dropdownMenu}>

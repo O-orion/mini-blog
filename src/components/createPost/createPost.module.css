@@ -1,0 +1,121 @@
+.createButton {
+  background: #36465d;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.createButton:hover {
+  background: #445c7b;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #1c2526;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.titleInput {
+  background: #2e3738;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Georgia', serif;
+  outline: none;
+}
+
+.textarea {
+  background: #2e3738;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  color: #fff;
+  font-size: 16px;
+  resize: none;
+  font-family: 'Georgia', serif;
+  outline: none;
+}
+
+.fileInput {
+  color: #fff;
+  font-size: 14px;
+}
+
+.tagsInput {
+  background: #2e3738;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  outline: none;
+}
+
+.titleInput::placeholder,
+.textarea::placeholder,
+.tagsInput::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.submitButton {
+  background: #e94e77;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitButton:hover {
+  background: #d43d65;
+}
+
+.submitButton:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
