@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Importado para redirecionamento
 import { useAuthentication } from '../../hooks/useAuthentication';
 import styles from './login.module.css';
 
@@ -6,6 +7,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login, error, loading } = useAuthentication();
+  const navigate = useNavigate(); // Hook para redirecionamento
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,17 +17,19 @@ const Login = () => {
 
     if (user) {
       console.log('Login bem-sucedido:', user);
-      // Aqui você pode redirecionar o usuário, ex.: usando useNavigate
+      navigate('/'); // Redireciona para a home
     }
   };
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>My-Poems</h2>
-      <p className={styles.subtitle}>Desvende os segredos da sua alma.</p>
+      <h2 className={styles.title}>
+        My<span>Poems</span>
+      </h2>
+      <p className={styles.subtitle}>Desvende os segredos da sua alma</p>
       <form className={styles.form} onSubmit={handleSubmit}>
         <label className={styles.label}>
-          <span>E-mail:</span>
+          <span>E-mail</span>
           <input
             className={styles.input}
             type="email"
@@ -37,7 +41,7 @@ const Login = () => {
           />
         </label>
         <label className={styles.label}>
-          <span>Senha:</span>
+          <span>Senha</span>
           <input
             className={styles.input}
             type="password"
@@ -53,6 +57,9 @@ const Login = () => {
         </button>
         {error && <p className={styles.error}>{error}</p>}
       </form>
+      <p className={styles.registerLink}>
+        Não tem uma conta? <a href="/cadastro">Cadastre-se</a>
+      </p>
     </div>
   );
 };

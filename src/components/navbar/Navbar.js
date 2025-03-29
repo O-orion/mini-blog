@@ -47,7 +47,7 @@ const Navbar = () => {
             </li>
           </>
         ) : (
-          <li className={styles.dropdown}>
+          <li className={`${styles.dropdown} ${isDropdownOpen ? styles.open : ''}`}>
             <button
               className={styles.profileIcon}
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}

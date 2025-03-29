@@ -1,76 +1,146 @@
 .container {
-  max-width: 450px;
+  max-width: 500px;
   margin: 50px auto;
   padding: 40px;
-  background: #2E2E33;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(107, 78, 113, 0.1);
+  background: #1F2529;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
-h2  {
-  font-size: 25px;
+/* Efeito de fundo sutil */
+.container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 138, 128, 0.1) 0%, transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.title {
+  font-size: 42px;
   font-weight: 700;
-  color: #E8E8E8;
+  color: #FF8A80; /* Coral suave */
   text-align: center;
+  font-family: 'Playfair Display', serif;
   margin-bottom: 10px;
 }
 
-p {
-  font-size: 16px;
-  color: #A68A64;
+.title span {
+  color: #FFE0B2; /* Tom pêssego para destaque */
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #F9F9F9;
   text-align: center;
-  margin-bottom: 30px;
-  font-family: 'Roboto', sans-serif;
+  margin-bottom: 40px;
+  font-style: italic;
+  opacity: 0.9;
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px; /* Espaçamento fluido */
 }
 
-label {
+.label {
   display: flex;
   flex-direction: column;
-  font-size: 14px;
-  color: #E8E8E8;
+  gap: 8px;
 }
 
-label span {
-  margin-bottom: 8px;
-  font-weight: 500;
-  font-family: 'Roboto', sans-serif;
-}
-
-input {
-  padding: 12px 15px;
-  border: 1px solid #6B4E71;
-  border-radius: 6px;
-  font-size: 14px;
-  font-family: 'Roboto', sans-serif;
-  background: #1A1A1D;
-  color: #E8E8E8;
-  transition: all 0.3s ease;
-}
-
-input:focus {
-  border-color: #A68A64;
-  background: #2E2E33;
-}
-
-button {
-  padding: 12px;
-  background: linear-gradient(135deg, #6B4E71, #543B5A);
-  color: #E8E8E8;
-  border: none;
-  border-radius: 6px;
+.label span {
   font-size: 16px;
-  font-weight: 600;
-  font-family: 'Roboto', sans-serif;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  color: #F9F9F9;
+  font-weight: 500;
 }
 
-button:hover {
-  background: #543B5A;
+.input {
+  padding: 14px;
+  border: 2px solid #6D8299;
+  border-radius: 12px;
+  background: #2A2D34;
+  color: #F9F9F9;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  border-color: #FF8A80;
+  box-shadow: 0 0 8px rgba(255, 138, 128, 0.3); /* Brilho sutil */
+  outline: none;
+}
+
+.button {
+  padding: 14px;
+  background: linear-gradient(135deg, #FF8A80, #FFB3A7); /* Gradiente suave */
+  color: #F9F9F9;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  background: #FFE0B2;
+  color: #2A2D34;
+  transform: translateY(-3px); /* Efeito de "salto" */
+  box-shadow: 0 5px 15px rgba(255, 224, 178, 0.4);
+}
+
+.button:disabled {
+  background: #6D8299;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.error {
+  background: rgba(217, 83, 79, 0.2);
+  color: #FF8A80;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.success {
+  background: rgba(40, 167, 69, 0.2);
+  color: #28A745;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.loginLink {
+  font-size: 14px;
+  color: #F9F9F9;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loginLink a {
+  color: #FF8A80;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.loginLink a:hover {
+  color: #FFE0B2;
 }

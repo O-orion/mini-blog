@@ -1,17 +1,22 @@
 .sidebarRight {
-    position: sticky;
-    top: 80px;
-    height: calc(100vh - 80px);
-    padding: 20px;
-    background-color: #2e2e3327;
-    border-left: 1px solid #6B4E71;
-    color: #E8E8E8;
-    font-family: 'Roboto', sans-serif;
-  }
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 80px);
+  padding: 20px;
+  background: #1F2529;
+  border-left: 1px solid #FF6F61;
+  width: 250px;
+  color: #F9F9F9;
+}
 
+.sidebarRight h3 {
+  font-size: 20px;
+  color: #FF6F61;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+}
 
-  @media (max-width: 768px) {
-     .sidebarRight {
-      display: none; 
-    }
-  }
+.sidebarRight p {
+  font-size: 14px;
+  color: #6D8299;
+}

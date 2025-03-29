@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { db, auth, storage } from '../../firebase/config'; // Ajuste o caminho se necessário
+import { db, auth } from '../../firebase/config'; // Removi 'storage', pois não será usado
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import styles from './createPost.module.css'; // Vamos criar esse CSS
+import styles from './createPost.module.css';
 
 const CreatePost = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
-  const [image, setImage] = useState(null);
+  const [imageUrl, setImageUrl] = useState(''); // Substituí 'image' por 'imageUrl'
   const [tags, setTags] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -28,28 +27,21 @@ const CreatePost = () => {
 
     setLoading(true);
     try {
-      let imageUrl = '';
-      if (image) {
-        const imageRef = ref(storage, `images/${user.uid}/${Date.now()}_${image.name}`);
-        await uploadBytes(imageRef, image);
-        imageUrl = await getDownloadURL(imageRef);
-      }
-
       await addDoc(collection(db, 'posts'), {
         userId: user.uid,
         title: title.trim() || 'Sem título',
         text: text,
-        imageUrl: imageUrl,
-        tags: tags.split(',').map(tag => tag.trim()).filter(tag => tag), // Converte tags em array
+        imageUrl: imageUrl.trim(), // Salva a URL diretamente
+        tags: tags.split(',').map(tag => tag.trim()).filter(tag => tag),
         createdAt: serverTimestamp(),
         likes: 0,
         comments: 0,
       });
       setTitle('');
       setText('');
-      setImage(null);
+      setImageUrl(''); // Limpa o campo de URL
       setTags('');
-      setIsOpen(false); // Fecha o modal
+      setIsOpen(false);
       alert('Post criado com sucesso!');
     } catch (error) {
       console.error('Erro ao criar post:', error);
@@ -87,10 +79,11 @@ const CreatePost = () => {
                 disabled={loading}
               />
               <input
-                type="file"
-                accept="image/*"
-                onChange={(e) => setImage(e.target.files[0])}
-                className={styles.fileInput}
+                type="text" // Mudado de 'file' para 'text'
+                value={imageUrl}
+                onChange={(e) => setImageUrl(e.target.value)}
+                placeholder="Cole o link da imagem (opcional)"
+                className={styles.imageUrlInput} // Nova classe para estilizar
                 disabled={loading}
               />
               <input

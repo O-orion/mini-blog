@@ -1,16 +1,17 @@
 .container {
   display: flex;
   min-height: 100vh;
-  background: #121212; /* Fundo escuro */
-  color: #fff;
-  font-family: 'Arial', sans-serif;
+  background: #2A2D34; /* Fundo escuro do novo design */
+  color: #F9F9F9;
+  font-family: 'Poppins', sans-serif;
 }
 
 .main {
   flex: 1;
-  max-width: 600px;
+  max-width: 700px; /* Aumentei um pouco para dar mais espaço aos posts */
   margin: 0 auto;
   padding: 20px;
+  padding-top: 100px; /* Espaço para o Navbar fixo */
 }
 
 .header {
@@ -21,14 +22,27 @@
 }
 
 .header h1 {
-  font-size: 28px;
-  font-family: 'Georgia', serif;
-  color: #e0e0e0;
+  font-size: 32px;
+  font-family: 'Playfair Display', serif;
+  color: #FF6F61; /* Cor primária vibrante */
 }
 
 .noPosts {
-  color: #888;
+  color: #6D8299; /* Tom neutro do novo design */
   font-style: italic;
   text-align: center;
+  font-size: 16px;
   margin-top: 20px;
+}
+
+/* Ajustes para garantir que as sidebars funcionem bem */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .main {
+    max-width: 100%;
+    padding: 20px;
+  }
 }

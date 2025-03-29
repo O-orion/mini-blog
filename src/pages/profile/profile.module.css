@@ -1,221 +1,224 @@
 .profileContainer {
-    max-width: 900px;
-    margin: 100px auto 40px;
-    padding: 0 20px;
-    font-family: 'Roboto', sans-serif;
-    color: #E8E8E8;
-  }
-  
-  .profileHeader {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 30px;
-    background: linear-gradient(135deg, #2E2E33, #1A1A1D);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .profilePicture {
-    position: relative;
-    transition: transform 0.3s ease;
-  }
-  
-  .profilePicture:hover {
-    transform: scale(1.05);
-  }
-  
-  .profileImg {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #A68A64;
-    box-shadow: 0 0 15px rgba(166, 138, 100, 0.5);
-  }
-  
-  .placeholder {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: #36465d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #E8E8E8;
-    font-size: 18px;
-    border: 3px dashed #A68A64;
-  }
-  
-  .uploadInput {
-    display: none;
-  }
-  
-  .uploadButton {
-    display: block;
-    margin-top: 15px;
-    background: #6B4E71;
-    color: #E8E8E8;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-  
-  .uploadButton:hover {
-    background: #A68A64;
-    transform: translateY(-2px);
-  }
-  
-  .uploadButton:disabled {
-    background: #555;
-    cursor: not-allowed;
-  }
-  
-  .userInfo {
-    flex: 1;
-  }
-  
-  .userName {
-    font-size: 32px;
-    font-family: 'Georgia', serif;
-    color: #E8E8E8;
-    margin: 0;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .userTitle {
-    font-size: 18px;
-    color: #A68A64;
-    font-style: italic;
-    margin: 5px 0;
-  }
-  
-  .userEmail {
-    font-size: 16px;
-    color: #A9A9A9;
-    margin: 5px 0;
-  }
-  
-  .profileStats {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin: 20px 0;
-    padding: 20px;
-    background: #2E2E33;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .statItem {
-    text-align: center;
-  }
-  
-  .statNumber {
-    display: block;
-    font-size: 24px;
-    color: #E8E8E8;
-    font-weight: bold;
-  }
-  
-  .statLabel {
-    font-size: 14px;
-    color: #A9A9A9;
-  }
-  
-  .profileContent {
-    margin-top: 20px;
-  }
-  
-  .section {
-    background: #2E2E33;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .section h2 {
-    font-size: 22px;
-    color: #E8E8E8;
-    font-family: 'Georgia', serif;
-    margin-bottom: 15px;
-  }
-  
-  .tags,
-  .badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .tag,
-  .badge {
-    background: #6B4E71;
-    color: #E8E8E8;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    transition: transform 0.2s ease;
-  }
-  
-  .tag:hover,
-  .badge:hover {
-    transform: scale(1.1);
-  }
-  
-  .badge {
-    background: #A68A64;
-  }
-  
-  .input {
-    width: 100%;
-    background: #1A1A1D;
-    border: 1px solid #A68A64;
-    border-radius: 10px;
-    padding: 12px;
-    color: #E8E8E8;
-    font-size: 14px;
-    margin-top: 10px;
-    transition: border-color 0.3s ease;
-  }
-  
-  .input:focus {
-    border-color: #E94E77;
-  }
-  
-  .actionButton {
-    background: #E94E77;
-    color: #E8E8E8;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    margin-top: 15px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-  
-  .actionButton:hover {
-    background: #D43D65;
-    transform: translateY(-2px);
-  }
-  
-  .noContent {
-    color: #A9A9A9;
-    font-style: italic;
-    font-size: 14px;
-  }
-  
-  .loading {
-    text-align: center;
-    color: #A9A9A9;
-    font-size: 18px;
-    margin-top: 50px;
-  }
+  max-width: 1000px;
+  margin: 120px auto 40px;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #F9F9F9;
+}
+
+.profileHeader {
+  background: linear-gradient(135deg, #FF8A80, #FFE0B2); /* Gradiente suave */
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 12px 35px rgba(255, 138, 128, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.profileHeader::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 224, 178, 0.15) 0%, transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.profileImg {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 6px solid #F9F9F9;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Correção aplicada */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.profileImg:hover {
+  transform: scale(1.05);
+}
+
+.placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6D8299, #A9B7C6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F9F9F9;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Correção aplicada */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.placeholder:hover {
+  transform: scale(1.05);
+}
+
+.userName {
+  font-size: 36px;
+  color: #2A2D34;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.userTitle {
+  font-size: 20px;
+  color: #4A3F35;
+  font-style: italic;
+  margin: 5px 0;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0.9;
+}
+
+.userEmail {
+  font-size: 16px;
+  color: #4A3F35;
+  margin: 5px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.profileStats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  background: #1F2529;
+  border-radius: 20px;
+  padding: 25px;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 28px;
+  color: #FF8A80;
+  font-weight: 700;
+  display: block;
+}
+
+.statLabel {
+  font-size: 16px;
+  color: #F9F9F9;
+  opacity: 0.8;
+}
+
+.section {
+  background: #1F2529;
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+  font-size: 24px;
+  color: #FF8A80;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.section h2::after {
+  content: '✨';
+  font-size: 18px;
+  margin-left: 10px;
+  color: #FFE0B2;
+}
+
+.tags,
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.tag,
+.badge {
+  background: #FF8A80;
+  color: #F9F9F9;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.tag:hover,
+.badge:hover {
+  transform: scale(1.1);
+}
+
+.badge {
+  background: #FFE0B2;
+  color: #2A2D34;
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  background: #2A2D34;
+  border: 2px solid #6D8299;
+  border-radius: 12px;
+  padding: 12px;
+  color: #F9F9F9;
+  font-size: 14px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #FF8A80;
+  box-shadow: 0 0 8px rgba(255, 138, 128, 0.3);
+}
+
+.actionButton {
+  background: linear-gradient(135deg, #FF8A80, #FFB3A7);
+  color: #F9F9F9;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.actionButton:hover {
+  background: #FFE0B2;
+  color: #2A2D34;
+  transform: translateY(-3px);
+}
+
+.noContent {
+  color: #6D8299;
+  font-style: italic;
+  font-size: 14px;
+  text-align: center;
+}
+
+.postCard {
+  background: #2A2D34;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+}

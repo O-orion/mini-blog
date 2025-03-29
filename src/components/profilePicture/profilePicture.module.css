@@ -1,0 +1,82 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: #1F2529;
+    border-radius: 20px;
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    color: #F9F9F9;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #F9F9F9;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .closeButton:hover {
+    color: #FF8A80;
+  }
+  
+  h3 {
+    font-size: 20px;
+    color: #FF8A80;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .input {
+    width: 100%;
+    background: #2A2D34;
+    border: 2px solid #6D8299;
+    border-radius: 12px;
+    padding: 12px;
+    color: #F9F9F9;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .input:focus {
+    border-color: #FF8A80;
+    outline: none;
+  }
+  
+  .saveButton {
+    background: #FF8A80;
+    color: #F9F9F9;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .saveButton:hover {
+    background: #FFE0B2;
+    color: #2A2D34;
+    transform: translateY(-3px);
+  }

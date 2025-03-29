@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { db } from '../../firebase/config'; // Ajuste o caminho
+import { db } from '../../firebase/config';
 import { collection, query, orderBy, onSnapshot, doc, getDoc } from 'firebase/firestore';
 import PostCard from '../post/Post';
 import styles from './listpost.module.css';
@@ -18,19 +18,20 @@ const ListPost = () => {
             const postData = { id: postDoc.id, ...postDoc.data() };
             console.log('Post encontrado:', postData);
 
-            // Buscar foto de perfil do usuário
+            // Buscar dados do usuário (foto de perfil e nome)
             const userDocRef = doc(db, 'users', postData.userId);
             const userDoc = await getDoc(userDocRef);
-            const profilePicture = userDoc.exists() ? userDoc.data().profilePicture || '' : '';
-            console.log('Foto de perfil para userId', postData.userId, ':', profilePicture);
+            const userData = userDoc.exists() ? userDoc.data() : {};
+            const profilePicture = userData.profilePicture || '';
+            const userName = userData.name || 'Anônimo';
 
-            return { ...postData, profilePicture };
+            return { ...postData, profilePicture, userName };
           })
         );
         console.log('Posts processados:', postsData);
         setPosts(postsData);
       } catch (error) {
-        console.error('Erro ao buscar posts ou fotos de perfil:', error);
+        console.error('Erro ao buscar posts ou dados de usuário:', error);
       }
     }, (error) => {
       console.error('Erro no onSnapshot:', error);
@@ -46,7 +47,12 @@ const ListPost = () => {
     <div>
       {posts.length > 0 ? (
         posts.map((post) => (
-          <PostCard key={post.id} post={post} profilePicture={post.profilePicture} />
+          <PostCard
+            key={post.id}
+            post={post}
+            profilePicture={post.profilePicture}
+            userName={post.userName} // Passando o nome do usuário
+          />
         ))
       ) : (
         <p className={styles.noPosts}>Nenhum post para exibir ainda...</p>
