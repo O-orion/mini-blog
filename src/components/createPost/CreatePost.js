@@ -42,7 +42,7 @@ const CreatePost = () => {
       setImageUrl(''); // Limpa o campo de URL
       setTags('');
       setIsOpen(false);
-      alert('Post criado com sucesso!');
+
     } catch (error) {
       console.error('Erro ao criar post:', error);
       alert('Erro ao criar o post: ' + error.message);
@@ -83,7 +83,7 @@ const CreatePost = () => {
                 value={imageUrl}
                 onChange={(e) => setImageUrl(e.target.value)}
                 placeholder="Cole o link da imagem (opcional)"
-                className={styles.imageUrlInput} // Nova classe para estilizar
+                className={styles.titleInput} // Nova classe para estilizar
                 disabled={loading}
               />
               <input

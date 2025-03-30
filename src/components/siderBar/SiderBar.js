@@ -1,8 +1,17 @@
 import React from 'react';
 import styles from './siderbar.module.css';
-import { FaHome, FaCompass, FaUsers } from 'react-icons/fa'; // Ícones do react-icons
+import { FaHome, FaCompass, FaUsers } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 function SiderBar() {
+
+  const navigate = useNavigate();
+
+  const handleNavigateExplorar = (e) => {
+    e.preventDefault();
+    navigate('/navegar');
+  }
+
   return (
     <aside className={styles.menuLateral}>
       <ul className={styles.menuList}>
@@ -13,7 +22,7 @@ function SiderBar() {
           </a>
         </li>
         <li className={styles.menuItem}>
-          <a href="#" className={styles.menuLink}>
+          <a onClick={ handleNavigateExplorar } className={styles.menuLink}>
             <FaCompass className={styles.icon} />
             <span>Navegar</span>
           </a>

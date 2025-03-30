@@ -2,7 +2,7 @@
   position: sticky;
   top: 80px;
   height: calc(100vh - 80px);
-  background: #1A1A1D; /* Fundo mais escuro e sólido */
+  background: #1A1A1D;
   padding: 20px 10px;
   width: 200px;
   border-right: 1px solid #A68A64;
@@ -36,7 +36,7 @@
 .menuLink:hover {
   background: #6B4E71;
   color: #E8E8E8;
-  transform: translateX(5px); /* Movimento sutil ao passar o mouse */
+  transform: translateX(5px); 
 }
 
 .icon {
@@ -46,6 +46,6 @@
 
 @media (max-width: 768px) {
   .menuLateral {
-    display: none; /* Mantém o comportamento mobile */
+    display: none; 
   }
 }

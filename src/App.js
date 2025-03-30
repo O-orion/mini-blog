@@ -7,6 +7,8 @@ import Footer from './components/footer/Foooter'; // Corrigido "Foooter" para "F
 import Login from './pages/login/Login';
 import Registro from './pages/register/Registro';
 import Profile from './pages/profile/Profile';
+import PostDetails from './components/PostDetails/PostDetails'
+import NavigatePage from './pages/navegar/Navegar';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/cadastro" element={<Registro />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/my-posts" element={<Home />} />
+            <Route path="/navegar" element={<NavigatePage />} />
+            <Route path="/post/:postId" element={<PostDetails />} />
           </Routes>
         </div>
       </BrowserRouter>

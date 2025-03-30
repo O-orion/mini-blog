@@ -1,0 +1,139 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    background: #2A2D34;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 40px;
+  }
+  
+  /* Filtros */
+  .filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .filters button {
+    background: #1F2529;
+    color: #F9F9F9;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .filters button:hover {
+    background: #FF6F61;
+    color: #F9F9F9;
+  }
+  
+  .activeFilter {
+    background: #FF6F61 !important;
+    color: #F9F9F9 !important;
+  }
+  
+  /* Grid Masonry */
+  .grid {
+    column-count: 3;
+    column-gap: 20px;
+    width: 100%;
+  }
+  
+  .postCard {
+    background: #1F2529;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .postCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .postCard h3 {
+    font-size: 22px;
+    color: #FF6F61;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+  }
+  
+  .postCard p {
+    font-size: 16px;
+    color: #F9F9F9;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    word-break: break-word;
+  }
+  
+  .postImage {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+  
+  .postVideo {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+  
+  .tags {
+    margin-top: 15px;
+  }
+  
+  .tag {
+    display: inline-block;
+    background: #F7D794;
+    color: #2A2D34;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+  
+  /* Ações */
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    color: #F9F9F9;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+  }
+  
+  .actionItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .actionItem svg {
+    color: #FF6F61;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 1024px) {
+    .main {
+      margin-right: 0; /* Remove espaço do SiderBarRight em telas menores */
+    }
+    .grid {
+      column-count: 2;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      column-count: 1;
+    }
+  }

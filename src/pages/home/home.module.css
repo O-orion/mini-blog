@@ -11,7 +11,7 @@
   max-width: 700px; /* Aumentei um pouco para dar mais espaço aos posts */
   margin: 0 auto;
   padding: 20px;
-  padding-top: 100px; /* Espaço para o Navbar fixo */
+  padding-top: 20px; /* Espaço para o Navbar fixo */
 }
 
 .header {
