@@ -12,10 +12,10 @@ const PostDetails = () => {
   const [post, setPost] = useState(null);
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
-  const [replyTo, setReplyTo] = useState(null); // Para respostas
+  const [replyTo, setReplyTo] = useState(null);
 
   useEffect(() => {
-    // Carregar dados do post
+    
     const fetchPost = async () => {
       const postRef = doc(db, 'posts', postId);
       const postSnap = await getDoc(postRef);
@@ -64,7 +64,7 @@ const PostDetails = () => {
         text: newComment,
         createdAt: serverTimestamp(),
         likes: 0,
-        parentId: replyTo || null, // Se for resposta, inclui o ID do comentário pai
+        parentId: replyTo || null,
       };
       await addDoc(collection(db, 'posts', postId, 'comments'), commentData);
       setNewComment('');

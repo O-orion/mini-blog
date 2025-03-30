@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importado para redirecionamento
+import { useNavigate } from 'react-router-dom'; 
 import { useAuthentication } from '../../hooks/useAuthentication';
 import styles from './login.module.css';
 
@@ -7,7 +7,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login, error, loading } = useAuthentication();
-  const navigate = useNavigate(); // Hook para redirecionamento
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ const Login = () => {
 
     if (user) {
       console.log('Login bem-sucedido:', user);
-      navigate('/'); // Redireciona para a home
+      navigate('/'); 
     }
   };
 

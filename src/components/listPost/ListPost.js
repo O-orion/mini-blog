@@ -51,7 +51,7 @@ const ListPost = () => {
             key={post.id}
             post={post}
             profilePicture={post.profilePicture}
-            userName={post.userName} // Passando o nome do usuário
+            userName={post.userName}
           />
         ))
       ) : (

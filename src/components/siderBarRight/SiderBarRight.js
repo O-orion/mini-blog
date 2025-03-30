@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { db, auth } from '../../firebase/config'; // Importe sua configuração do Firebase
+import { db, auth } from '../../firebase/config';
 import { collection, getDocs, doc, updateDoc, arrayUnion } from 'firebase/firestore';
 import styles from './siderbarright.module.css';
 

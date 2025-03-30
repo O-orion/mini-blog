@@ -4,13 +4,13 @@
   padding: 40px;
   background: #1F2529;
   border-radius: 20px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3); /* Sombra mais suave */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3); 
   position: relative;
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
 }
 
-/* Efeito de fundo sutil */
+
 .container::before {
   content: '';
   position: absolute;
@@ -26,14 +26,14 @@
 .title {
   font-size: 42px;
   font-weight: 700;
-  color: #FF8A80; /* Coral suave */
+  color: #FF8A80; 
   text-align: center;
   font-family: 'Playfair Display', serif;
   margin-bottom: 10px;
 }
 
 .title span {
-  color: #FFE0B2; /* Tom pêssego para destacar */
+  color: #FFE0B2; 
 }
 
 .subtitle {
@@ -48,7 +48,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Espaçamento mais fluido */
+  gap: 20px;
 }
 
 .label {
@@ -75,13 +75,13 @@
 
 .input:focus {
   border-color: #FF8A80;
-  box-shadow: 0 0 8px rgba(255, 138, 128, 0.3); /* Brilho sutil */
+  box-shadow: 0 0 8px rgba(255, 138, 128, 0.3);
   outline: none;
 }
 
 .button {
   padding: 14px;
-  background: linear-gradient(135deg, #FF8A80, #FFB3A7); /* Gradiente suave */
+  background: linear-gradient(135deg, #FF8A80, #FFB3A7);
   color: #F9F9F9;
   border-radius: 30px;
   font-size: 18px;
@@ -96,7 +96,7 @@
 .button:hover {
   background: #FFE0B2;
   color: #2A2D34;
-  transform: translateY(-3px); /* Efeito de "salto" */
+  transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(255, 224, 178, 0.4);
 }
 

@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Foooter'; // Corrigido "Foooter" para "Footer"
 import Login from './pages/login/Login';
 import Registro from './pages/register/Registro';
 import Profile from './pages/profile/Profile';

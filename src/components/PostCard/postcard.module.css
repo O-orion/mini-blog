@@ -1,0 +1,70 @@
+.postCard {
+    background: #1f2529;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .postCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .postCard h3 {
+    font-size: 22px;
+    color: #ff6f61;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+  }
+  
+  .postCard p {
+    font-size: 16px;
+    color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    word-break: break-word;
+  }
+  
+  .postImage,
+  .postVideo {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+  
+  .tags {
+    margin-top: 15px;
+  }
+  
+  .tag {
+    display: inline-block;
+    background: #f7d794;
+    color: #2a2d34;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+    color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+  }
+  
+  .actionItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .actionItem svg {
+    color: #ff6f61;
+  }

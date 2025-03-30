@@ -12,11 +12,16 @@ function SiderBar() {
     navigate('/navegar');
   }
 
+  const handleNavigateHome = (e) => {
+    e.preventDefault();
+    navigate('/');
+  }
+
   return (
     <aside className={styles.menuLateral}>
       <ul className={styles.menuList}>
         <li className={styles.menuItem}>
-          <a href="#" className={styles.menuLink}>
+          <a onClick={handleNavigateHome }  className={styles.menuLink}>
             <FaHome className={styles.icon} />
             <span>Início</span>
           </a>

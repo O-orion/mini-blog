@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #1A1A1D 0%, #2E2E33 100%); /* Gradiente sutil */
+  background: linear-gradient(180deg, #1A1A1D 0%, #2E2E33 100%);
   color: #E8E8E8;
   width: 100%;
   border-top: 1px solid #A68A64;

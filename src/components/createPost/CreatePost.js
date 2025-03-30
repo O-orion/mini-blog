@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { db, auth } from '../../firebase/config'; // Removi 'storage', pois não será usado
+import { db, auth } from '../../firebase/config';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import styles from './createPost.module.css';
 
@@ -7,7 +7,7 @@ const CreatePost = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
-  const [imageUrl, setImageUrl] = useState(''); // Substituí 'image' por 'imageUrl'
+  const [imageUrl, setImageUrl] = useState(''); 
   const [tags, setTags] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -31,7 +31,7 @@ const CreatePost = () => {
         userId: user.uid,
         title: title.trim() || 'Sem título',
         text: text,
-        imageUrl: imageUrl.trim(), // Salva a URL diretamente
+        imageUrl: imageUrl.trim(),
         tags: tags.split(',').map(tag => tag.trim()).filter(tag => tag),
         createdAt: serverTimestamp(),
         likes: 0,
@@ -39,7 +39,7 @@ const CreatePost = () => {
       });
       setTitle('');
       setText('');
-      setImageUrl(''); // Limpa o campo de URL
+      setImageUrl(''); 
       setTags('');
       setIsOpen(false);
 
@@ -79,11 +79,11 @@ const CreatePost = () => {
                 disabled={loading}
               />
               <input
-                type="text" // Mudado de 'file' para 'text'
+                type="text" 
                 value={imageUrl}
                 onChange={(e) => setImageUrl(e.target.value)}
                 placeholder="Cole o link da imagem (opcional)"
-                className={styles.titleInput} // Nova classe para estilizar
+                className={styles.titleInput} 
                 disabled={loading}
               />
               <input
