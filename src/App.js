@@ -8,6 +8,7 @@ import Registro from './pages/register/Registro';
 import Profile from './pages/profile/Profile';
 import PostDetails from './components/PostDetails/PostDetails'
 import NavigatePage from './pages/navegar/Navegar';
+import Comunidades from './pages/comunidades/Comunidades';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/my-posts" element={<Home />} />
             <Route path="/navegar" element={<NavigatePage />} />
+            <Route path="/comunidades" element={<Comunidades />} />
             <Route path="/post/:postId" element={<PostDetails />} />
           </Routes>
         </div>

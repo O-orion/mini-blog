@@ -17,6 +17,11 @@ function SiderBar() {
     navigate('/');
   }
 
+  const handleNavigateComunidades = (e) => {
+    e.preventDefault();
+    navigate('/comunidades');
+  }
+
   return (
     <aside className={styles.menuLateral}>
       <ul className={styles.menuList}>
@@ -33,7 +38,7 @@ function SiderBar() {
           </a>
         </li>
         <li className={styles.menuItem}>
-          <a href="#" className={styles.menuLink}>
+          <a onClick={ handleNavigateComunidades } className={styles.menuLink}>
             <FaUsers className={styles.icon} />
             <span>Comunidades</span>
           </a>
