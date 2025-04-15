@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SideBar from '../../components/siderBar/SiderBar';
 import styles from './comunidade.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const MOCK_COMMUNITIES = [
   {
@@ -43,6 +44,7 @@ const MOCK_COMMUNITIES = [
 const Comunidades = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [communities, setCommunities] = useState(MOCK_COMMUNITIES);
+  const navigate = useNavigate();
 
   const handleSearch = (e) => {
     const term = e.target.value.toLowerCase();
@@ -58,7 +60,8 @@ const Comunidades = () => {
   };
 
   const handleJoinCommunity = (communityName) => {
-    alert(`Você entrou na comunidade "${communityName}"! (Funcionalidade em desenvolvimento)`);
+ 
+    navigate('/comunidadeDetalhes')
     
   };
 
@@ -84,7 +87,7 @@ const Comunidades = () => {
         <div className={styles.communityList}>
           {communities.length > 0 ? (
             communities.map((community) => (
-              <div key={community.id} className={styles.communityCard}>
+              <div onClick={ handleJoinCommunity } key={community.id} className={styles.communityCard}>
                 <img
                   src={community.coverImage}
                   alt={`${community.name} capa`}
